@@ -1,6 +1,9 @@
-function App() {
+function App(){
   return(
-    <h1>Hello React</h1>
+    <div>
+      <h1>Hello React</h1>
+      <p>My first React component</p>
+    </div>
   );
 }
 
