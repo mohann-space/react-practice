@@ -1,8 +1,22 @@
+import { useState } from "react";
+
 function App(){
-  return(
-    <div>
-      <h1>Hello React</h1>
-      <p>My first React component</p>
+  const [darkMode, setDarkMode] = useState(false);
+
+  return (
+    <div
+     style={{
+      backgroundColor: darkMode ? "black" : "white",
+      color: darkMode ? "white" : "black",
+      minHeight: "100vh",
+      padding: "20px",
+     }}
+    >
+      <h1>{darkMode ? "Dark Mode" : "Light Mode"}</h1>
+
+      <button onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? "Switch to Light" : "Switch to Dark"}
+      </button>
     </div>
   );
 }
