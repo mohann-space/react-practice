@@ -5,6 +5,7 @@ function App() {
 
     function handleFocus() {
         inputRef.current.focus();
+        inputRef.current.value = "";
     }
 
     return(
