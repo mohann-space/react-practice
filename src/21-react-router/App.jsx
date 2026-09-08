@@ -1,7 +1,17 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
 
 function Home() {
-    return <h2>Home Page</h2>;
+    const navigate = useNavigate();
+
+    return (
+        <>
+          <h2>Home Page</h2>
+
+          <button onClick={() => navigate("/about")}>
+            Go to About
+          </button>
+        </>
+    );
 }
 
 function About() {
