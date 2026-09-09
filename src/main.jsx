@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./21-react-router/App.jsx";
+import App from "./22-dynamic-routing/App.jsx";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
