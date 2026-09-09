@@ -1,10 +1,12 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useParams } from "react-router-dom";
 
 function Home() {
     return <h2>Home Page</h2>
 }
 function User() {
-    return <h2>User Page</h2>
+    const { id } = useParams();
+
+    return <h2>User ID: {id}</h2>;
 }
 
 function App(){
@@ -12,7 +14,7 @@ function App(){
         <BrowserRouter>
           <nav>
             <Link to="/">Home</Link> |{" "}
-            <Link to="/user/101">User</Link>
+            <Link to="/user/101">User 101</Link>
           </nav>
 
           <Routes>
